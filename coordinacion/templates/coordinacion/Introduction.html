@@ -1,0 +1,37 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Introducción
+{% endblock %}
+
+{% block content %}
+
+    {% include Constants.instructions_template %}
+
+<div class="card bg-light instructions">
+    <div class="card-body">
+ <h4> Ejemplo 1</h4>
+        Suponga que en una ronda, usted eligió un nivel de esfuerzo 4 y alguno de sus compañeros eligió el nivel de
+        esfuerzo 6. En la tabla usted debe ubicar primero su pago en la parte izquierda (sombreado verde)y luego ver en la parte superior
+        el esfuerzo mínimo dado en el grupo (sombreado azul). Dado que 4 es menor que 6, usted hizo el esfuerzo mínimo y el pago se da en
+        la intersección de ambos (sombreado naranja), como se muestra en la imágen.
+
+
+    <img src="{% static "tesis/ejemplo 1.PNG"%}"/>
+
+    <h4> Ejemplo 2</h4>
+        Suponga que en una ronda, usted eligió un nivel de esfuerzo 4 y alguno de sus compañeros eligió el nivel de
+        esfuerzo 0. En la tabla usted debe ubicar primero su pago en la parte izquierda (sombreado verde)y luego ver en la parte superior
+        el esfuerzo mínimo dado en el grupo (sombreado azul). Dado que 0 es menor que 4, otra persona hizo el esfuerzo mínimo
+        y el pago se da en la intersección de ambos (sombreado naranja), como se muestra en la imágen.
+
+     <img src="{% static "tesis/ejemplo 2.PNG"%}"/>
+     <p>Durante el desarrollo de las sesiones usted no deberá calcular nada, el programa lo hará. Solo tenga presente la tabla de pagos
+     para saber cómo invertir de manera inteligente su esfuerzo. En cada ronda se mostrará la tabla así como un recuento de
+     las rondas pasadas.</p>
+
+    {% next_button %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+
+{% block title %} Esfuerzo{% endblock %}
+
+{% block content %}
+
+<div class="card bg-light instructions">
+    <div class="card-body">
+
+
+    <hr>
+    <h4>Turnos anteriores</h4>
+    <table class="table">
+        <tr>
+            <th>Ronda</th>
+            <th>Esfuerzos</th>
+            <th>Pago</th>
+        </tr>
+        {% for p in player_in_previous_rounds %}
+            <tr>
+                <td>{{ p.round_number }}</td>
+                <td>Tu esfuerzo fue <b>{{ p.contribution}}</b> y el esfuerzo mínimo del grupo <b>{{ p.group.total_contribution }}</b></td>
+                <td> <b>{{p.pago}}</b></td>
+            </tr>
+        {% endfor %}
+    </table>
+        <p style="text-align:center;">
+            <img src="{% static "tesis/tabla_pagos.PNG"%}"width="500" />
+        </p>
+
+     <br>
+
+        <h3>Ronda {{player.round_number }}</h3>
+
+        {% formfield player.contribution label="El nivel de esfuerzo para este periodo será" %}
+
+    {% next_button %}
+
+    {% include Constants.instructions_template %}
+
+
+    </div>
+</div>
+
+{% endblock %}

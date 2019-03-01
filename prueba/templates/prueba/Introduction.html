@@ -1,0 +1,74 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Introducción
+{% endblock %}
+
+{% block content %}
+
+<div class="card bg-light instructions">
+    <div class="card-body">
+    <h3>
+        Instrucciones
+    </h3>
+
+    <p>
+
+        Para este ejercicio, usted hará parte de un grupo de
+        <b>4  estudiantes de su colegio</b>, elegidos al azar. Durante el desarrollo de la actividad usted
+        <b> no podrá comunicarse con ninguna persona</b> a excepción de preguntas individuales realizadas personalmente al instructor.
+        Cada participante del grupo tiene que elegir al mismo tiempo un nivel de esfuerzo.  El nivel de esfuerzo elegido
+        se toma de una lista de pares del        0 al 10. Luego de elegir el nivel de esfuerzo, cada jugador recibirá
+        un pago de acuerdo al mínimo esfuerzo elegido en el grupo de acuerdo a la tabla.
+    </p>
+        <p style="text-align:center;">
+            <img src="{% static "tesis/tabla_pagos.PNG"%}" width="500" />
+        </p>
+        <p>El juego se repetirá {{ Constants.num_rounds}} rondas. Cada cierto tiempo, el instructor le dirá al grupo
+        que deben parar para una instrucción especial. Al finalizar las rondas, se elegirá una al azar y dependiendo del
+            pago de esa ronda se le pagará con dinero real de acuerdo a lo acordado.
+        </p>
+
+
+            </div>
+</div>
+
+<div class="card bg-light instructions">
+    <div class="card-body">
+ <h4> Ejemplo 1</h4>
+        Suponga que en una ronda, usted eligió un nivel de esfuerzo 4 y alguno de sus compañeros eligió el nivel de
+        esfuerzo 6. En la tabla usted debe ubicar primero su pago en la parte izquierda (sombreado verde)y luego ver en la parte superior
+        el esfuerzo mínimo dado en el grupo (sombreado azul). Dado que 4 es menor que 6, usted hizo el esfuerzo mínimo y el pago se da en
+        la intersección de ambos (sombreado naranja), como se muestra en la imágen.
+
+    <img src="{% static "tesis/ejemplo 1.PNG"%}"/>
+
+    <h4> Ejemplo 2</h4>
+        Suponga que en una ronda, usted eligió un nivel de esfuerzo 4 y alguno de sus compañeros eligió el nivel de
+        esfuerzo 0. En la tabla usted debe ubicar primero su pago en la parte izquierda (sombreado verde)y luego ver en la parte superior
+        el esfuerzo mínimo dado en el grupo (sombreado azul). Dado que 0 es menor que 4, otra persona hizo el esfuerzo mínimo
+        y el pago se da en la intersección de ambos (sombreado naranja), como se muestra en la imágen.
+
+     <img src="{% static "tesis/ejemplo 2.PNG"%}"/>
+     <p>Durante el desarrollo de las sesiones usted no deberá calcular nada, el programa lo hará. Solo tenga presente la tabla de pagos
+     para saber cómo invertir de manera inteligente su esfuerzo. En cada ronda se mostrará la tabla de pagos y un recuento de
+     las rondas pasadas.</p>
+
+    </div>
+</div>
+
+<div class="card bg-light instructions">
+    <div class="card-body">
+ <h4> Práctica</h4>
+
+        Una vez haya entendido las instrucciones, presione el botón "next". Iniciará un quiz con preguntas relacionadas al juego.
+        El objetivo de las preguntas es verificar si entendió las reglas del juego para que pueda participar de la mejor manera.
+
+
+    {% next_button %}
+    </div>
+</div>
+
+
+{% endblock %}

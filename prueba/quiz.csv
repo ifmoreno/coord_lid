@@ -1,0 +1,5 @@
+id,question,choice1,choice2,choice3,choice4,solution
+1,¿personas en total de su grupo? (con usted),5,4,10,3,4
+3,¿las mismas personas estaran durante todas las rondas?,S,N,,,S
+2,Con el cuadro de pagos, el esfuerzo mnimo del grupo fue:,0,2,4,8,2
+4,Con el cuadro de pagos, la persona que dio el esfuerzo mnimo fue: ,Usted,Otro jugador del grupo,,,Otro jugador del grupo

@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+
+{% block title %} Pregunta {{ player.round_number }} de {{ Constants.num_rounds }}
+{% endblock %}
+
+{% block content %}
+
+
+
+    Responda de acuerdo a las instrucciones y la siguiente tabla de pagos. La casilla resaltada en rojo representa el pago de la ronda.
+        <p style="text-align:center;">
+            <img src="{% static "tesis/quiz_inicial.PNG"%}" width="500" />
+        </p>
+
+
+    {% formfield player.submitted_answer label=player.question %}
+
+    {% next_button %}
+
+
+
+{% endblock %}

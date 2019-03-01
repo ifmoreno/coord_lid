@@ -1,0 +1,29 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Introducción
+{% endblock %}
+
+{% block content %}
+
+<div class="card bg-light instructions">
+    <div class="card-body">
+    <h3>
+        Bienvenida
+    </h3>
+
+    <p>
+
+        ¡Gracias por participar en este ejercicio de investigación!
+        Desde este momento no podrá interactuar con sus compañeros a menos de que
+        se le indique. Recuerde diligenciar con sus datos exactos los espacios destinados para ello, con eso
+        podremos contactarlo <b>para realizar el pago por participar</b>. En las siguientes páginas encontrará las instrucciones
+        para el desarrollo de la actividad, sígalas atentamente.
+
+
+    {% next_button %}
+    </div>
+</div>
+
+{% endblock %}

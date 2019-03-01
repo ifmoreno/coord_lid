@@ -1,0 +1,22 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %} Instrucciones {% endblock %}
+
+{% block content %}
+
+    <p>
+        En este juego usted participará en un grupo de
+        {{ Constants.players_per_group }} personas. Se jugarán en total
+        {{ Constants.num_rounds }}. Cada 3 rondas deberá parar y esperar instrucción.
+        Antes de iniciar la actividad se le harán unas preguntas para confirmar que
+        entendió el juego.
+
+    </p>
+
+
+    {% formfield player.contribucion_esfuerzo label="cuanto esfuerzo daras?" %}
+
+    {% next_button %}
+
+{% endblock %}

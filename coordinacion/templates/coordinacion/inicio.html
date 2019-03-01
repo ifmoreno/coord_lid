@@ -1,0 +1,22 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %} Datos {% endblock %}
+
+{% block content %}
+
+
+<div class="card bg-light instructions">
+    <div class="card-body">
+
+    Diligencie los siguientes datos. Recuerde que estos serán nuestra forma
+        de contactarlo para realizar el pago.
+    {% formfield player.colegio label="Colegio" %}
+    {% formfield player.curso label="Curso" %}
+    {% formfield player.codigo label="Código" %}
+    {% formfield player.sexo label="Sexo" %}
+
+    {% next_button %}
+    </div>
+</div>
+{% endblock %}

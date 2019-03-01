@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+
+{% block title %} Preguntas finales
+{% endblock %}
+
+{% block content %}
+
+
+
+    Responda las siguientes preguntas con respecto al rendimiento de su grupo y el desempeño de su líder. Marque 5 si está completamente de acuerdo con la afirmación y 1 si está completamente en desacuerdo.
+
+
+    {% formfield player.rendimiento_grupo label="El grupo está altamente comprometido con el bien común"%}
+
+    {% formfield player.rendimiento_lider label="El líder ha logrado coordinar el grupo, ha tenido un muy buen desempeño"%}
+
+
+    {% formfield player.juicio_compañeros label="Los compañeros de mi grupo tienen un buen juicio de elección"%}
+
+    {% next_button %}
+
+{% endblock %}
+

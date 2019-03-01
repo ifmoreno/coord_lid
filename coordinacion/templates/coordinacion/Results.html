@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %} Resultados {% endblock %}
+
+{% block content %}
+<div class="card bg-light instructions">
+    <div class="card-body">
+
+    <p>
+        Para esta ronda, usted contribuyó un nivel de esfuerzo de <b>{{ player.contribution }}</b>.
+        El nivel mínimo de esfuerzo del grupo fue <b>{{ group.total_contribution }}</b>,
+        por lo que su pago es de  <b>{{ player.pago }}</b>.
+        <p style="text-align:center;">
+            <img src="{% static "tesis/tabla_pagos.PNG"%}"width="500" />
+        </p>
+    </p>
+
+    {% next_button %}
+
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% load otree %}
+
+<div class="card bg-light instructions">
+    <div class="card-body">
+    <h3>
+        Instrucciones
+    </h3>
+
+    <p>
+
+        Para este ejercicio, usted formará parte de un grupo de
+        <b>{{ Constants.players_per_group}}  estudiantes de su colegio</b>, elegidos al azar. Durante el desarrollo de la actividad usted
+        <b> no podrá comunicarse con ninguna persona</b> a excepción de preguntas individuales realizadas personalmente al instructor.
+        Cada participante del grupo tiene que elegir al mismo tiempo un nivel de esfuerzo.  El nivel de esfuerzo elegido
+        se toma de una lista de pares del        0 al 10. Luego de elegir el nivel de esfuerzo, cada jugador recibirá
+        un pago de acuerdo al mínimo esfuerzo elegido en el grupo de acuerdo a la tabla.
+    </p>
+        <p style="text-align:center;">
+            <img src="{% static "tesis/tabla_pagos.PNG"%}"width="500" />
+        </p>
+
+        <p>El juego se repetirá {{ Constants.num_rounds}} rondas. Cada cierto tiempo, el instructor le dirá al grupo
+        que deben parar para una instrucción especial. Al finalizar las rondas, se elegirá una al azar y dependiendo del
+            pago de esa ronda se le pagará con dinero real de acuerdo a lo acordado.
+        </p>
+
+
+
+    </div>
+</div>
+

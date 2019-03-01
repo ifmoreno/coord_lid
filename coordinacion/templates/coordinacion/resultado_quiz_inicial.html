@@ -1,0 +1,35 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Resultado quiz
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Respondiste {{ questions_correct }} de {{ Constants.num_rounds }}
+        preguntas correctamente.Recuerda que en todas las páginas para
+        contribuir encontrarás las instrucciones del juego.
+    </p>
+
+    <table class="table">
+        <tr>
+            <th>Pregunta</th>
+            <th>Tu respuesta</th>
+            <th>Respuesta correcta</th>
+            <th>¿Respondida correctamente?</th>
+        </tr>
+        {% for p in player_in_all_rounds %}
+            <tr>
+                <td>{{ p.question }}</td>
+                <td>{{ p.submitted_answer }}</td>
+                <td>{{ p.solution }}</td>
+                <td> <b>{{ p.is_correct }} </b></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+    {% next_button %}
+{% endblock %}

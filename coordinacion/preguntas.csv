@@ -1,0 +1,12 @@
+id,question,choice1,choice2,choice3,choice4,solution
+1,¿Cuántas personas hay en su grupo?,5,4,10,3,4
+2,¿Cuál fue el esfuerzo mínimo del grupo?,0,2,4,8,2
+3,¿Su grupo tendrá las mismas personas durante todas las rondas?,Sí,No,,,Sí
+4,¿Quién dio el esfuerzo mínimo?,Usted,El grupo,,,El grupo
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,

@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %} Contribución {% endblock %}
+
+{% block content %}
+
+    <p>
+        Recuerde que en cada ronda se le pagará de acuerdo al nivel de esfuerzo que usted elija y
+        el nivel de esfuerzo mínimo de todo el grupo (poner tabla)
+    </p>
+
+
+    {% formfield player.contribution label="¿Cuál es su nivel de esfuerzo para esta ronda?" %}
+
+    {% next_button %}
+
+{% endblock %}
