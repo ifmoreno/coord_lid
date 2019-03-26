@@ -15,8 +15,8 @@ class Constants(BaseConstants):
     name_in_url = 'coordinacion'
     players_per_group = 4
 #    players_per_group = 2
-    #num_rounds = 12
-    num_rounds = 6
+    num_rounds = 12
+   # num_rounds = 6
     endowment = 10
     multiplier = 0.5
     bono = 0.75
