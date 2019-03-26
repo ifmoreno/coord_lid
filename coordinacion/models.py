@@ -54,14 +54,16 @@ class Player(BasePlayer):
         doc="""Agent's work effort, [1, 10]""",
         widget=widgets.Select)
     curso = models.StringField(
-        choices=("10a","10b","10c"),
+        choices=("8a","8b","8c","8d","8e",
+                "9a","9b","9c","9d","9e",
+                "10a","10b","10c","10d","10e"),
         widget= widgets.Select
     )
     colegio = models.StringField(
-        choices=("Colegio1",
-                 "Colegio2",
-                 "Colegio3",
-                 "Colegio4"),
+        choices=("San Pedro",
+                 "San Jose",
+                 "Nuestra Senora del Rosario",
+                 "Nuestra Senora Presentacion"),
         widget= widgets.Select
     )
     codigo = models.IntegerField(
