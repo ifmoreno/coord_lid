@@ -65,7 +65,9 @@ ADMIN_PASSWORD = 'liderazgo'
 
 
 # Consider '', None, and '0' to be empty/false
-DEBUG = (environ.get('OTREE_PRODUCTION') in {None, '', '0'})
+#DEBUG = (environ.get('OTREE_PRODUCTION') in {None, '', '0'})
+DEBUG = (environ.get('OTREE_PRODUCTION') in {'1'})
+
 
 DEMO_PAGE_INTRO_HTML = """
 Here are various games implemented with 
