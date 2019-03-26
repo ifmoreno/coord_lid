@@ -16,6 +16,7 @@ SESSION_CONFIGS = [
     {
         'name': 'coordinacion',
         'display_name': "coordinacion beta",
+#        'num_demo_participants': 4,
         'num_demo_participants': 4,
         'app_sequence': ['prueba','coordinacion','pregunta_final'],
     }
