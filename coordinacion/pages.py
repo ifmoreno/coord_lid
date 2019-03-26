@@ -72,7 +72,6 @@ page_sequence = [
     Contribute,
     ResultsWaitPage,
     Results,
-    quiz_final,
     lider,
     para_lider,
     ]
